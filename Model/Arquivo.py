@@ -12,7 +12,6 @@ class Arquivo:
                 }
 
             def verificar_permissao(self, usuario, tipo):
-                # Corrigido para evitar erro caso o usuário não tenha permissões definidas
                 permissoes_usuario = self.permissoes.get(usuario.nome, {})
                 for permissao, valor in permissoes_usuario.items():
                     if permissao == tipo:
